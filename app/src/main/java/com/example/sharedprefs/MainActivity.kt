@@ -24,6 +24,11 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
 
     tvNotification = findViewById(R.id.tv_notification)
 
+    tvNotification.setOnClickListener {
+      val intent = SettingsActivity.newIntent(this)
+      startActivity(intent)
+    }
+
     setupDefaultSharedPrefs()
   }
 
